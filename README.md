@@ -28,7 +28,7 @@
     <img src="images/Ensemble.png" alt="Ensemble Image" width="800" height="400">
 </a>
 
-#### Text Response Model -- [llm_utils.py](https://github.com/your-repo/TensorRTNeMoAssistantEnsemble/blob/main/llm_utils.py)
+#### Text Response Model -- [llm_utils.py](https://github.com/harshp30/TensorRTNeMoAssistantEnsemble/blob/main/src/llm_utils.py)
 
 The text response script handles generating text responses using Nvidia NeMo models. It preprocesses the input text, generates responses, and post-processes the output.
 
@@ -52,7 +52,7 @@ The text response script handles generating text responses using Nvidia NeMo mod
 
 ---
 
-#### Image Generation Model -- [image_utils.py](https://github.com/your-repo/TensorRTNeMoAssistantEnsemble/blob/main/image_utils.py)
+#### Image Generation Model -- [image_utils.py](https://github.com/harshp30/TensorRTNeMoAssistantEnsemble/blob/main/src/image_utils.py)
 
 The image generation script handles creating images from text prompts using SDXL-Turbo API.
 
@@ -72,7 +72,7 @@ The image generation script handles creating images from text prompts using SDXL
 
 ---
 
-#### Video Generation Model -- [video_utils.py](https://github.com/your-repo/TensorRTNeMoAssistantEnsemble/blob/main/video_utils.py)
+#### Video Generation Model -- [video_utils.py](https://github.com/harshp30/TensorRTNeMoAssistantEnsemble/blob/main/src/video_utils.py)
 
 The video generation script handles creating videos from images using the Stable Video Diffusion API.
 
@@ -92,7 +92,7 @@ The video generation script handles creating videos from images using the Stable
 
 ---
 
-#### TensorRT Model -- [tensorrt_model.py](https://github.com/your-repo/TensorRTNeMoAssistantEnsemble/blob/main/tensorrt_model.py)
+#### TensorRT Model -- [tensorrt_model.py](https://github.com/harshp30/TensorRTNeMoAssistantEnsemble/blob/main/src/tensorrt_model.py)
 
 The TensorRT model script manages loading, allocating buffers, and performing inference with TensorRT models.
 
@@ -112,7 +112,7 @@ The TensorRT model script manages loading, allocating buffers, and performing in
 
 ---
 
-#### File Processing Model -- [file_utils.py](https://github.com/your-repo/TensorRTNeMoAssistantEnsemble/blob/main/file_utils.py)
+#### File Processing Model -- [file_utils.py](https://github.com/harshp30/TensorRTNeMoAssistantEnsemble/blob/main/src/file_utils.py)
 
 The file processing script handles parsing and extracting content from various file formats.
 
