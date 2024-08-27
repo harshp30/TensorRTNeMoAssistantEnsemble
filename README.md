@@ -15,17 +15,17 @@
 ### Video Demo:
 
 <a href="https://www.youtube.com/watch?v=13iVZZUfDa8">
-    <img src="images/demo.png" alt="Demo Image" width="600" height="400">
+    <img src="assets/demo.png" alt="Demo Image" width="600" height="400">
 </a>
 
 ---
 
 ### Technical Explanation:
 
-#### High Level Ensemble Diagram:
+#### High-Level Ensemble Diagram:
 
 <a>
-    <img src="images/Ensemble.png" alt="Ensemble Image" width="800" height="400">
+    <img src="assets/Ensemble.png" alt="Ensemble Image" width="800" height="400">
 </a>
 
 #### Text Response Model -- [llm_utils.py](https://github.com/harshp30/TensorRTNeMoAssistantEnsemble/blob/main/src/llm_utils.py)
@@ -33,18 +33,14 @@
 The text response script handles generating text responses using Nvidia NeMo models. It preprocesses the input text, generates responses, and post-processes the output.
 
 1. **Input Preprocessing:**
-   - **Text Truncation:**
-     - Truncate input text to ensure it doesn't exceed maximum token limits.
-   - **Text Normalization:**
-     - Lowercase text and remove unwanted characters.
+   - **Text Truncation:** Truncate input text to ensure it doesn't exceed maximum token limits.
+   - **Text Normalization:** Lowercase text and remove unwanted characters.
 
 2. **Model Inference:**
-   - **Generate Response:**
-     - Use Nvidia NeMo's LLaMA model to generate text responses based on the processed input.
+   - **Generate Response:** Use Nvidia NeMo's LLaMA model to generate text responses based on the processed input.
 
 3. **Output Post-Processing:**
-   - **Clean and Format Response:**
-     - Clean the generated response and format it for user display.
+   - **Clean and Format Response:** Clean the generated response and format it for user display.
 
 **Input:** Text prompt  
 **Output:** Generated text response  
@@ -54,17 +50,14 @@ The text response script handles generating text responses using Nvidia NeMo mod
 
 #### Image Generation Model -- [image_utils.py](https://github.com/harshp30/TensorRTNeMoAssistantEnsemble/blob/main/src/image_utils.py)
 
-The image generation script handles creating images from text prompts using SDXL-Turbo API.
+The image generation script handles creating images from text prompts using the SDXL-Turbo API.
 
 1. **API Request:**
-   - **Generate Image:**
-     - Send a request to the SDXL-Turbo API with the text prompt to generate an image.
-   - **Save Image:**
-     - Optionally save the generated image to a specified directory.
+   - **Generate Image:** Send a request to the SDXL-Turbo API with the text prompt to generate an image.
+   - **Save Image:** Optionally save the generated image to a specified directory.
 
 2. **Error Handling:**
-   - **Response Validation:**
-     - Check the API response for errors and handle them appropriately.
+   - **Response Validation:** Check the API response for errors and handle them appropriately.
 
 **Input:** Text prompt  
 **Output:** Generated image (optionally saved)  
@@ -77,14 +70,11 @@ The image generation script handles creating images from text prompts using SDXL
 The video generation script handles creating videos from images using the Stable Video Diffusion API.
 
 1. **API Request:**
-   - **Generate Video:**
-     - Send a request to the Stable Video Diffusion API with the base64 encoded image to generate a video.
-   - **Save Video:**
-     - Save the generated video to a specified directory.
+   - **Generate Video:** Send a request to the Stable Video Diffusion API with the base64-encoded image to generate a video.
+   - **Save Video:** Save the generated video to a specified directory.
 
 2. **Error Handling:**
-   - **Response Validation:**
-     - Check the API response for errors and handle them appropriately.
+   - **Response Validation:** Check the API response for errors and handle them appropriately.
 
 **Input:** Base64 encoded image  
 **Output:** Generated video (saved to directory)  
@@ -97,14 +87,11 @@ The video generation script handles creating videos from images using the Stable
 The TensorRT model script manages loading, allocating buffers, and performing inference with TensorRT models.
 
 1. **Engine Loading:**
-   - **Load TensorRT Engine:**
-     - Deserialize and load the TensorRT engine from a file.
-   - **Allocate Buffers:**
-     - Allocate necessary input and output buffers for inference.
+   - **Load TensorRT Engine:** Deserialize and load the TensorRT engine from a file.
+   - **Allocate Buffers:** Allocate necessary input and output buffers for inference.
 
 2. **Inference:**
-   - **Perform Inference:**
-     - Run inference using the loaded TensorRT engine and return the results.
+   - **Perform Inference:** Run inference using the loaded TensorRT engine and return the results.
 
 **Input:** Preprocessed input data  
 **Output:** Inference results  
@@ -117,14 +104,11 @@ The TensorRT model script manages loading, allocating buffers, and performing in
 The file processing script handles parsing and extracting content from various file formats.
 
 1. **File Parsing:**
-   - **Supported Formats:**
-     - Parse PDF, DOCX, PPTX, CSV, XLSX, TXT, and JSON files.
-   - **Content Extraction:**
-     - Extract text or data from the files and return it in a consistent format.
+   - **Supported Formats:** Parse PDF, DOCX, PPTX, CSV, XLSX, TXT, and JSON files.
+   - **Content Extraction:** Extract text or data from the files and return it in a consistent format.
 
 2. **Error Handling:**
-   - **File Format Validation:**
-     - Ensure the file format is supported and handle errors appropriately.
+   - **File Format Validation:** Ensure the file format is supported and handle errors appropriately.
 
 **Input:** File path  
 **Output:** Extracted content as a string  
@@ -134,7 +118,7 @@ The file processing script handles parsing and extracting content from various f
 
 ### Next Steps:
 
-- Expand the project to include more functionalities such as real-time data processing.
+- Expand the project to include more functionalities, such as real-time data processing.
 - Improve the robustness of the models by incorporating more advanced data augmentation techniques.
 - Optimize the inference pipeline for better performance and lower latency.
 
@@ -142,9 +126,9 @@ The file processing script handles parsing and extracting content from various f
 
 ### Citations:
 
+```
 Model and Dataset Credits:
 
-```
 Nvidia NeMo: https://developer.nvidia.com/nvidia-nemo
 TensorRT: https://developer.nvidia.com/tensorrt
 ```
